@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3607AF9F1672D67500A44020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3607AF9E1672D67500A44020 /* UIKit.framework */; };
+		3607AFA11672D67500A44020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3607AFA01672D67500A44020 /* Foundation.framework */; };
+		3607AFA31672D67500A44020 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3607AFA21672D67500A44020 /* CoreGraphics.framework */; };
+		3607AFA91672D67500A44020 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3607AFA71672D67500A44020 /* InfoPlist.strings */; };
+		3607AFAB1672D67500A44020 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3607AFAA1672D67500A44020 /* main.m */; };
+		3607AFAF1672D67500A44020 /* NTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3607AFAE1672D67500A44020 /* NTAppDelegate.m */; };
+		3607AFB11672D67500A44020 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3607AFB01672D67500A44020 /* Default.png */; };
+		3607AFB31672D67500A44020 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3607AFB21672D67500A44020 /* Default@2x.png */; };
+		3607AFB51672D67500A44020 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3607AFB41672D67500A44020 /* Default-568h@2x.png */; };
+		3607AFB81672D67500A44020 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3607AFB61672D67500A44020 /* MainStoryboard_iPhone.storyboard */; };
+		3607AFBB1672D67500A44020 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3607AFB91672D67500A44020 /* MainStoryboard_iPad.storyboard */; };
+		3607AFBE1672D67500A44020 /* NTFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3607AFBD1672D67500A44020 /* NTFirstViewController.m */; };
+		3607AFC01672D67500A44020 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 3607AFBF1672D67500A44020 /* first.png */; };
+		3607AFC21672D67500A44020 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3607AFC11672D67500A44020 /* first@2x.png */; };
+		3607AFC51672D67500A44020 /* NTSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3607AFC41672D67500A44020 /* NTSecondViewController.m */; };
+		3607AFC71672D67500A44020 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 3607AFC61672D67500A44020 /* second.png */; };
+		3607AFC91672D67500A44020 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3607AFC81672D67500A44020 /* second@2x.png */; };
+		3607AFD11672D67600A44020 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3607AFD01672D67600A44020 /* SenTestingKit.framework */; };
+		3607AFD21672D67600A44020 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3607AF9E1672D67500A44020 /* UIKit.framework */; };
+		3607AFD31672D67600A44020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3607AFA01672D67500A44020 /* Foundation.framework */; };
+		3607AFDB1672D67600A44020 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3607AFD91672D67600A44020 /* InfoPlist.strings */; };
+		3607AFDE1672D67600A44020 /* Nutrition_TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3607AFDD1672D67600A44020 /* Nutrition_TrackerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3607AFD41672D67600A44020 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3607AF911672D67500A44020 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3607AF991672D67500A44020;
+			remoteInfo = "Nutrition Tracker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3607AF9A1672D67500A44020 /* Nutrition Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nutrition Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3607AF9E1672D67500A44020 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3607AFA01672D67500A44020 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3607AFA21672D67500A44020 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3607AFA61672D67500A44020 /* Nutrition Tracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Nutrition Tracker-Info.plist"; sourceTree = "<group>"; };
+		3607AFA81672D67500A44020 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3607AFAA1672D67500A44020 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3607AFAC1672D67500A44020 /* Nutrition Tracker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nutrition Tracker-Prefix.pch"; sourceTree = "<group>"; };
+		3607AFAD1672D67500A44020 /* NTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTAppDelegate.h; sourceTree = "<group>"; };
+		3607AFAE1672D67500A44020 /* NTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTAppDelegate.m; sourceTree = "<group>"; };
+		3607AFB01672D67500A44020 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3607AFB21672D67500A44020 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3607AFB41672D67500A44020 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3607AFB71672D67500A44020 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		3607AFBA1672D67500A44020 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		3607AFBC1672D67500A44020 /* NTFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTFirstViewController.h; sourceTree = "<group>"; };
+		3607AFBD1672D67500A44020 /* NTFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTFirstViewController.m; sourceTree = "<group>"; };
+		3607AFBF1672D67500A44020 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		3607AFC11672D67500A44020 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		3607AFC31672D67500A44020 /* NTSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTSecondViewController.h; sourceTree = "<group>"; };
+		3607AFC41672D67500A44020 /* NTSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTSecondViewController.m; sourceTree = "<group>"; };
+		3607AFC61672D67500A44020 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		3607AFC81672D67500A44020 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		3607AFCF1672D67600A44020 /* Nutrition TrackerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nutrition TrackerTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3607AFD01672D67600A44020 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3607AFD81672D67600A44020 /* Nutrition TrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Nutrition TrackerTests-Info.plist"; sourceTree = "<group>"; };
+		3607AFDA1672D67600A44020 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3607AFDC1672D67600A44020 /* Nutrition_TrackerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nutrition_TrackerTests.h; sourceTree = "<group>"; };
+		3607AFDD1672D67600A44020 /* Nutrition_TrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Nutrition_TrackerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3607AF971672D67500A44020 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3607AF9F1672D67500A44020 /* UIKit.framework in Frameworks */,
+				3607AFA11672D67500A44020 /* Foundation.framework in Frameworks */,
+				3607AFA31672D67500A44020 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3607AFCB1672D67600A44020 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3607AFD11672D67600A44020 /* SenTestingKit.framework in Frameworks */,
+				3607AFD21672D67600A44020 /* UIKit.framework in Frameworks */,
+				3607AFD31672D67600A44020 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3607AF8F1672D67500A44020 = {
+			isa = PBXGroup;
+			children = (
+				3607AFA41672D67500A44020 /* Nutrition Tracker */,
+				3607AFD61672D67600A44020 /* Nutrition TrackerTests */,
+				3607AF9D1672D67500A44020 /* Frameworks */,
+				3607AF9B1672D67500A44020 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3607AF9B1672D67500A44020 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3607AF9A1672D67500A44020 /* Nutrition Tracker.app */,
+				3607AFCF1672D67600A44020 /* Nutrition TrackerTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3607AF9D1672D67500A44020 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3607AF9E1672D67500A44020 /* UIKit.framework */,
+				3607AFA01672D67500A44020 /* Foundation.framework */,
+				3607AFA21672D67500A44020 /* CoreGraphics.framework */,
+				3607AFD01672D67600A44020 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3607AFA41672D67500A44020 /* Nutrition Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				3607AFAD1672D67500A44020 /* NTAppDelegate.h */,
+				3607AFAE1672D67500A44020 /* NTAppDelegate.m */,
+				3607AFB61672D67500A44020 /* MainStoryboard_iPhone.storyboard */,
+				3607AFB91672D67500A44020 /* MainStoryboard_iPad.storyboard */,
+				3607AFBC1672D67500A44020 /* NTFirstViewController.h */,
+				3607AFBD1672D67500A44020 /* NTFirstViewController.m */,
+				3607AFBF1672D67500A44020 /* first.png */,
+				3607AFC11672D67500A44020 /* first@2x.png */,
+				3607AFC31672D67500A44020 /* NTSecondViewController.h */,
+				3607AFC41672D67500A44020 /* NTSecondViewController.m */,
+				3607AFC61672D67500A44020 /* second.png */,
+				3607AFC81672D67500A44020 /* second@2x.png */,
+				3607AFA51672D67500A44020 /* Supporting Files */,
+			);
+			path = "Nutrition Tracker";
+			sourceTree = "<group>";
+		};
+		3607AFA51672D67500A44020 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3607AFA61672D67500A44020 /* Nutrition Tracker-Info.plist */,
+				3607AFA71672D67500A44020 /* InfoPlist.strings */,
+				3607AFAA1672D67500A44020 /* main.m */,
+				3607AFAC1672D67500A44020 /* Nutrition Tracker-Prefix.pch */,
+				3607AFB01672D67500A44020 /* Default.png */,
+				3607AFB21672D67500A44020 /* Default@2x.png */,
+				3607AFB41672D67500A44020 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3607AFD61672D67600A44020 /* Nutrition TrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3607AFDC1672D67600A44020 /* Nutrition_TrackerTests.h */,
+				3607AFDD1672D67600A44020 /* Nutrition_TrackerTests.m */,
+				3607AFD71672D67600A44020 /* Supporting Files */,
+			);
+			path = "Nutrition TrackerTests";
+			sourceTree = "<group>";
+		};
+		3607AFD71672D67600A44020 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3607AFD81672D67600A44020 /* Nutrition TrackerTests-Info.plist */,
+				3607AFD91672D67600A44020 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3607AF991672D67500A44020 /* Nutrition Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3607AFE11672D67600A44020 /* Build configuration list for PBXNativeTarget "Nutrition Tracker" */;
+			buildPhases = (
+				3607AF961672D67500A44020 /* Sources */,
+				3607AF971672D67500A44020 /* Frameworks */,
+				3607AF981672D67500A44020 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Nutrition Tracker";
+			productName = "Nutrition Tracker";
+			productReference = 3607AF9A1672D67500A44020 /* Nutrition Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3607AFCE1672D67600A44020 /* Nutrition TrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3607AFE41672D67600A44020 /* Build configuration list for PBXNativeTarget "Nutrition TrackerTests" */;
+			buildPhases = (
+				3607AFCA1672D67600A44020 /* Sources */,
+				3607AFCB1672D67600A44020 /* Frameworks */,
+				3607AFCC1672D67600A44020 /* Resources */,
+				3607AFCD1672D67600A44020 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3607AFD51672D67600A44020 /* PBXTargetDependency */,
+			);
+			name = "Nutrition TrackerTests";
+			productName = "Nutrition TrackerTests";
+			productReference = 3607AFCF1672D67600A44020 /* Nutrition TrackerTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3607AF911672D67500A44020 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NT;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Alex Chesser";
+			};
+			buildConfigurationList = 3607AF941672D67500A44020 /* Build configuration list for PBXProject "Nutrition Tracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3607AF8F1672D67500A44020;
+			productRefGroup = 3607AF9B1672D67500A44020 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3607AF991672D67500A44020 /* Nutrition Tracker */,
+				3607AFCE1672D67600A44020 /* Nutrition TrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3607AF981672D67500A44020 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3607AFA91672D67500A44020 /* InfoPlist.strings in Resources */,
+				3607AFB11672D67500A44020 /* Default.png in Resources */,
+				3607AFB31672D67500A44020 /* Default@2x.png in Resources */,
+				3607AFB51672D67500A44020 /* Default-568h@2x.png in Resources */,
+				3607AFB81672D67500A44020 /* MainStoryboard_iPhone.storyboard in Resources */,
+				3607AFBB1672D67500A44020 /* MainStoryboard_iPad.storyboard in Resources */,
+				3607AFC01672D67500A44020 /* first.png in Resources */,
+				3607AFC21672D67500A44020 /* first@2x.png in Resources */,
+				3607AFC71672D67500A44020 /* second.png in Resources */,
+				3607AFC91672D67500A44020 /* second@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3607AFCC1672D67600A44020 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3607AFDB1672D67600A44020 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3607AFCD1672D67600A44020 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3607AF961672D67500A44020 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3607AFAB1672D67500A44020 /* main.m in Sources */,
+				3607AFAF1672D67500A44020 /* NTAppDelegate.m in Sources */,
+				3607AFBE1672D67500A44020 /* NTFirstViewController.m in Sources */,
+				3607AFC51672D67500A44020 /* NTSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3607AFCA1672D67600A44020 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3607AFDE1672D67600A44020 /* Nutrition_TrackerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3607AFD51672D67600A44020 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3607AF991672D67500A44020 /* Nutrition Tracker */;
+			targetProxy = 3607AFD41672D67600A44020 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3607AFA71672D67500A44020 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3607AFA81672D67500A44020 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3607AFB61672D67500A44020 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3607AFB71672D67500A44020 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		3607AFB91672D67500A44020 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3607AFBA1672D67500A44020 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		3607AFD91672D67600A44020 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3607AFDA1672D67600A44020 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3607AFDF1672D67600A44020 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3607AFE01672D67600A44020 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3607AFE21672D67600A44020 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nutrition Tracker/Nutrition Tracker-Prefix.pch";
+				INFOPLIST_FILE = "Nutrition Tracker/Nutrition Tracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3607AFE31672D67600A44020 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nutrition Tracker/Nutrition Tracker-Prefix.pch";
+				INFOPLIST_FILE = "Nutrition Tracker/Nutrition Tracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3607AFE51672D67600A44020 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Nutrition Tracker.app/Nutrition Tracker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nutrition Tracker/Nutrition Tracker-Prefix.pch";
+				INFOPLIST_FILE = "Nutrition TrackerTests/Nutrition TrackerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3607AFE61672D67600A44020 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Nutrition Tracker.app/Nutrition Tracker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Nutrition Tracker/Nutrition Tracker-Prefix.pch";
+				INFOPLIST_FILE = "Nutrition TrackerTests/Nutrition TrackerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3607AF941672D67500A44020 /* Build configuration list for PBXProject "Nutrition Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3607AFDF1672D67600A44020 /* Debug */,
+				3607AFE01672D67600A44020 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3607AFE11672D67600A44020 /* Build configuration list for PBXNativeTarget "Nutrition Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3607AFE21672D67600A44020 /* Debug */,
+				3607AFE31672D67600A44020 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3607AFE41672D67600A44020 /* Build configuration list for PBXNativeTarget "Nutrition TrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3607AFE51672D67600A44020 /* Debug */,
+				3607AFE61672D67600A44020 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3607AF911672D67500A44020 /* Project object */;
+}
