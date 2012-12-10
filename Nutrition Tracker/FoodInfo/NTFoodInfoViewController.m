@@ -25,13 +25,10 @@
     NSString *sql = [NSString stringWithFormat: @"SELECT * FROM FOOD_DES WHERE NDB_No = '%@';", foodID];
     NSArray *foodItem = [appDelegate getQuery: sql];
     if ([foodItem count] == 1) {
-        self.FoodItem = [foodItem objectAtIndex: 0];
-        NSLog(@"FOODITEM %@", self.FoodItem);
-        
+        self.FoodItem = [foodItem objectAtIndex: 0];        
         sql = sql = [NSString stringWithFormat: @"SELECT  * FROM WEIGHT WHERE NDB_No = '%@'", foodID];
         
         self.Weights = [appDelegate getQuery:sql];
-        NSLog(@"%@", self.Weights);
         
         sql = [NSString stringWithFormat: @"SELECT  def.NutrDesc, def.Units, d.* FROM NUT_DATA d LEFT JOIN NUTR_DEF def ON d.Nutr_No = def.Nutr_No WHERE NDB_No = '%@'", foodID];
         self.FoodData = [appDelegate getQuery:sql];

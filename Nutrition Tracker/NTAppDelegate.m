@@ -9,11 +9,13 @@
 #import "NTAppDelegate.h"
 
 @implementation NTAppDelegate
+@synthesize addFilter = _addFilter;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     self.databaseName = @"nutrition.sqlite";
+    self.addFilter = @"";
     
     NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDir = [documentPaths objectAtIndex:0];

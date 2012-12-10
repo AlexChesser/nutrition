@@ -8,7 +8,7 @@
 
 #import "NTFoodSearchViewController.h"
 #import "NTFoodInfoViewController.h"
-
+#import "NTFirstViewController.h"
 
 @interface NTFoodSearchViewController ()
 
@@ -35,12 +35,27 @@
     
 }
 
+-(void) viewWillAppear:(BOOL)animated{
+    [self fetchResults];
+    [self.ResultTable reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)searchBarResultsListButtonClicked:(UISearchBar *)searchBar {
+    UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone"
+                                                  bundle:nil];
+    NTFirstViewController *vc = [sb instantiateViewControllerWithIdentifier:@"NTFirstViewController"];
+    vc.searchText = self.SearchBar.text;
+    [self presentViewController: vc animated:YES completion:^{}];
+    
+    
+}
 
 #pragma mark - Table view data source
 
@@ -53,17 +68,24 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    if ([self.SearchResults count] == 0) {
-        return 1;
-    }
     return [self.SearchResults count];
     
 }
 
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+- (void) fetchResults{
     NTAppDelegate *appDelegate = (NTAppDelegate *)[[UIApplication sharedApplication] delegate];
-    self.SearchResults = [appDelegate getQuery:[NSString stringWithFormat: @"SELECT * FROM FOOD_DES WHERE Long_Desc LIKE '%%%@%%' ORDER BY Shrt_Desc ASC", searchText]];
+    NSString *addWhere = @"";
+    if (appDelegate.addFilter != @"" && appDelegate.addFilter != @"None") {
+        addWhere = [NSString stringWithFormat:@" AND fg.FdGrp_Desc = '%@'", appDelegate.addFilter];
+    }
+
+    NSString *sql = [NSString stringWithFormat: @"SELECT fd.*, fg.FdGrp_Desc FROM FOOD_DES fd INNER JOIN FD_GROUP fg ON fd.FdGrp_Cd = fg.FdGrp_Cd WHERE Long_Desc LIKE '%%%@%%' %@ ORDER BY FdGrp_Desc, Shrt_Desc ASC", self.SearchBar.text, addWhere];
+    self.SearchResults = [appDelegate getQuery:sql];
     
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    [self fetchResults];
     [self.ResultTable reloadData];
 
 }
@@ -81,6 +103,7 @@
     if ([self.SearchResults count] > 0) {
         NSDictionary *fi = [self.SearchResults objectAtIndex:indexPath.row];
         cell.textLabel.text = [fi valueForKey:@"Long_Desc"];
+        cell.detailTextLabel.text = [fi valueForKey:@"FdGrp_Desc"];
         cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
 
     } else {
