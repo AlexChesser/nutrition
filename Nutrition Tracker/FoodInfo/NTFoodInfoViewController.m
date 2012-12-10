@@ -26,15 +26,12 @@
     NSArray *foodItem = [appDelegate getQuery: sql];
     if ([foodItem count] == 1) {
         self.FoodItem = [foodItem objectAtIndex: 0];        
-        sql = sql = [NSString stringWithFormat: @"SELECT  * FROM WEIGHT WHERE NDB_No = '%@'", foodID];
+        sql = [NSString stringWithFormat: @"SELECT  * FROM WEIGHT WHERE NDB_No = '%@'", foodID];
         
         self.Weights = [appDelegate getQuery:sql];
         
         sql = [NSString stringWithFormat: @"SELECT  def.NutrDesc, def.Units, d.* FROM NUT_DATA d LEFT JOIN NUTR_DEF def ON d.Nutr_No = def.Nutr_No WHERE NDB_No = '%@'", foodID];
         self.FoodData = [appDelegate getQuery:sql];
-
-        
-        
     }
 }
 
@@ -46,8 +43,6 @@
 	// Do any additional setup after loading the view.
     self.FoodTitle.text = [self.FoodItem valueForKey:@"Long_Desc"];
     self.nav.topItem.title = [self.FoodItem valueForKey:@"Long_Desc"];
-
-
 }
 
 -(IBAction)done:(id)sender{
@@ -118,6 +113,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.WeightAmount resignFirstResponder];
+    [self.FoodTitle resignFirstResponder];
     [self weightChange:self];
 }
 
