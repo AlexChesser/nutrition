@@ -13,9 +13,45 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.databaseName = @"nutrition.sqlite";
+    
+    NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDir = [documentPaths objectAtIndex:0];
+    self.databasePath = [documentDir stringByAppendingPathComponent:self.databaseName];
+    
+    [self createAndCheckDatabase];
+    
+    self.database = [[FMDatabase alloc] initWithPath:self.databasePath];
+    
     return YES;
 }
-							
+
+-(NSArray *)getQuery: (NSString *) sql{
+    [self.database open];
+    FMResultSet *results = [self.database executeQuery:sql];
+    NSMutableArray *arr = [[NSMutableArray alloc] initWithArray:nil];
+    while([results next])
+    {
+        [arr addObject:[results resultDictionary]];
+    }
+    [self.database close];
+    return arr;
+}
+
+-(void) createAndCheckDatabase
+{
+    BOOL success;
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    success = [fileManager fileExistsAtPath:self.databasePath];
+    
+    if(success) return;
+    
+    NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:self.databaseName];
+    
+    [fileManager copyItemAtPath:databasePathFromApp toPath:self.databasePath error:nil];
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

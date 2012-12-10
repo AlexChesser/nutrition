@@ -29,6 +29,24 @@
 		3607AFD31672D67600A44020 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3607AFA01672D67500A44020 /* Foundation.framework */; };
 		3607AFDB1672D67600A44020 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3607AFD91672D67600A44020 /* InfoPlist.strings */; };
 		3607AFDE1672D67600A44020 /* Nutrition_TrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3607AFDD1672D67600A44020 /* Nutrition_TrackerTests.m */; };
+		361DB4A1167302B400CA0009 /* nutrition.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 361DB4A0167302B400CA0009 /* nutrition.sqlite */; };
+		361DB4A2167302B400CA0009 /* nutrition.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 361DB4A0167302B400CA0009 /* nutrition.sqlite */; };
+		361DB4BA1673CDEA00CA0009 /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 361DB4B91673CDEA00CA0009 /* libFMDB.a */; };
+		3696689C1674FC8E005B8F1D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3696689B1674FC8E005B8F1D /* libsqlite3.0.dylib */; };
+		369668E11674FD1F005B8F1D /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 369668D81674FD1F005B8F1D /* FMDatabase.m */; };
+		369668E21674FD1F005B8F1D /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 369668D81674FD1F005B8F1D /* FMDatabase.m */; };
+		369668E31674FD1F005B8F1D /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 369668DA1674FD1F005B8F1D /* FMDatabaseAdditions.m */; };
+		369668E41674FD1F005B8F1D /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 369668DA1674FD1F005B8F1D /* FMDatabaseAdditions.m */; };
+		369668E51674FD1F005B8F1D /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 369668DC1674FD1F005B8F1D /* FMDatabasePool.m */; };
+		369668E61674FD1F005B8F1D /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 369668DC1674FD1F005B8F1D /* FMDatabasePool.m */; };
+		369668E71674FD1F005B8F1D /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 369668DE1674FD1F005B8F1D /* FMDatabaseQueue.m */; };
+		369668E81674FD1F005B8F1D /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 369668DE1674FD1F005B8F1D /* FMDatabaseQueue.m */; };
+		369668E91674FD1F005B8F1D /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 369668E01674FD1F005B8F1D /* FMResultSet.m */; };
+		369668EA1674FD1F005B8F1D /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 369668E01674FD1F005B8F1D /* FMResultSet.m */; };
+		3696690F16751311005B8F1D /* NTFoodSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3696690E16751311005B8F1D /* NTFoodSearchViewController.m */; };
+		3696691016751311005B8F1D /* NTFoodSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3696690E16751311005B8F1D /* NTFoodSearchViewController.m */; };
+		36966917167523A8005B8F1D /* NTFoodInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36966916167523A8005B8F1D /* NTFoodInfoViewController.m */; };
+		36966918167523A8005B8F1D /* NTFoodInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36966916167523A8005B8F1D /* NTFoodInfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +89,23 @@
 		3607AFDA1672D67600A44020 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3607AFDC1672D67600A44020 /* Nutrition_TrackerTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nutrition_TrackerTests.h; sourceTree = "<group>"; };
 		3607AFDD1672D67600A44020 /* Nutrition_TrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Nutrition_TrackerTests.m; sourceTree = "<group>"; };
+		361DB4A0167302B400CA0009 /* nutrition.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = nutrition.sqlite; sourceTree = "<group>"; };
+		361DB4B91673CDEA00CA0009 /* libFMDB.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFMDB.a; path = "../../../../../Library/Developer/Xcode/DerivedData/Nutrition_Tracker-cthvjebazmyzhpccospnvmytnqqy/Build/Products/Debug/libFMDB.a"; sourceTree = "<group>"; };
+		3696689B1674FC8E005B8F1D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		369668D71674FD1F005B8F1D /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = fmdb/src/FMDatabase.h; sourceTree = SOURCE_ROOT; };
+		369668D81674FD1F005B8F1D /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = fmdb/src/FMDatabase.m; sourceTree = SOURCE_ROOT; };
+		369668D91674FD1F005B8F1D /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = fmdb/src/FMDatabaseAdditions.h; sourceTree = SOURCE_ROOT; };
+		369668DA1674FD1F005B8F1D /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = fmdb/src/FMDatabaseAdditions.m; sourceTree = SOURCE_ROOT; };
+		369668DB1674FD1F005B8F1D /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = fmdb/src/FMDatabasePool.h; sourceTree = SOURCE_ROOT; };
+		369668DC1674FD1F005B8F1D /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = fmdb/src/FMDatabasePool.m; sourceTree = SOURCE_ROOT; };
+		369668DD1674FD1F005B8F1D /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = fmdb/src/FMDatabaseQueue.h; sourceTree = SOURCE_ROOT; };
+		369668DE1674FD1F005B8F1D /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = fmdb/src/FMDatabaseQueue.m; sourceTree = SOURCE_ROOT; };
+		369668DF1674FD1F005B8F1D /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = fmdb/src/FMResultSet.h; sourceTree = SOURCE_ROOT; };
+		369668E01674FD1F005B8F1D /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = fmdb/src/FMResultSet.m; sourceTree = SOURCE_ROOT; };
+		3696690D16751311005B8F1D /* NTFoodSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NTFoodSearchViewController.h; path = FoodSearch/NTFoodSearchViewController.h; sourceTree = "<group>"; };
+		3696690E16751311005B8F1D /* NTFoodSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NTFoodSearchViewController.m; path = FoodSearch/NTFoodSearchViewController.m; sourceTree = "<group>"; };
+		36966915167523A8005B8F1D /* NTFoodInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NTFoodInfoViewController.h; path = FoodInfo/NTFoodInfoViewController.h; sourceTree = "<group>"; };
+		36966916167523A8005B8F1D /* NTFoodInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NTFoodInfoViewController.m; path = FoodInfo/NTFoodInfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +113,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3696689C1674FC8E005B8F1D /* libsqlite3.0.dylib in Frameworks */,
+				361DB4BA1673CDEA00CA0009 /* libFMDB.a in Frameworks */,
 				3607AF9F1672D67500A44020 /* UIKit.framework in Frameworks */,
 				3607AFA11672D67500A44020 /* Foundation.framework in Frameworks */,
 				3607AFA31672D67500A44020 /* CoreGraphics.framework in Frameworks */,
@@ -100,6 +137,8 @@
 		3607AF8F1672D67500A44020 = {
 			isa = PBXGroup;
 			children = (
+				3696689B1674FC8E005B8F1D /* libsqlite3.0.dylib */,
+				361DB4B91673CDEA00CA0009 /* libFMDB.a */,
 				3607AFA41672D67500A44020 /* Nutrition Tracker */,
 				3607AFD61672D67600A44020 /* Nutrition TrackerTests */,
 				3607AF9D1672D67500A44020 /* Frameworks */,
@@ -130,6 +169,10 @@
 		3607AFA41672D67500A44020 /* Nutrition Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				36966919167523B0005B8F1D /* FoodInfo */,
+				3696690C167512C2005B8F1D /* SearchView */,
+				369668601674F964005B8F1D /* Utilities */,
+				3607AFE71672D6CD00A44020 /* CoreData */,
 				3607AFAD1672D67500A44020 /* NTAppDelegate.h */,
 				3607AFAE1672D67500A44020 /* NTAppDelegate.m */,
 				3607AFB61672D67500A44020 /* MainStoryboard_iPhone.storyboard */,
@@ -178,6 +221,57 @@
 				3607AFD91672D67600A44020 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3607AFE71672D6CD00A44020 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				361DB4A0167302B400CA0009 /* nutrition.sqlite */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		369668601674F964005B8F1D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				369668D61674FCEE005B8F1D /* FMDB */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		369668D61674FCEE005B8F1D /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				369668D71674FD1F005B8F1D /* FMDatabase.h */,
+				369668D81674FD1F005B8F1D /* FMDatabase.m */,
+				369668D91674FD1F005B8F1D /* FMDatabaseAdditions.h */,
+				369668DA1674FD1F005B8F1D /* FMDatabaseAdditions.m */,
+				369668DB1674FD1F005B8F1D /* FMDatabasePool.h */,
+				369668DC1674FD1F005B8F1D /* FMDatabasePool.m */,
+				369668DD1674FD1F005B8F1D /* FMDatabaseQueue.h */,
+				369668DE1674FD1F005B8F1D /* FMDatabaseQueue.m */,
+				369668DF1674FD1F005B8F1D /* FMResultSet.h */,
+				369668E01674FD1F005B8F1D /* FMResultSet.m */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
+		3696690C167512C2005B8F1D /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				3696690D16751311005B8F1D /* NTFoodSearchViewController.h */,
+				3696690E16751311005B8F1D /* NTFoodSearchViewController.m */,
+			);
+			name = SearchView;
+			sourceTree = "<group>";
+		};
+		36966919167523B0005B8F1D /* FoodInfo */ = {
+			isa = PBXGroup;
+			children = (
+				36966915167523A8005B8F1D /* NTFoodInfoViewController.h */,
+				36966916167523A8005B8F1D /* NTFoodInfoViewController.m */,
+			);
+			name = FoodInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +356,7 @@
 				3607AFC21672D67500A44020 /* first@2x.png in Resources */,
 				3607AFC71672D67500A44020 /* second.png in Resources */,
 				3607AFC91672D67500A44020 /* second@2x.png in Resources */,
+				361DB4A1167302B400CA0009 /* nutrition.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3607AFDB1672D67600A44020 /* InfoPlist.strings in Resources */,
+				361DB4A2167302B400CA0009 /* nutrition.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +396,13 @@
 				3607AFAF1672D67500A44020 /* NTAppDelegate.m in Sources */,
 				3607AFBE1672D67500A44020 /* NTFirstViewController.m in Sources */,
 				3607AFC51672D67500A44020 /* NTSecondViewController.m in Sources */,
+				369668E11674FD1F005B8F1D /* FMDatabase.m in Sources */,
+				369668E31674FD1F005B8F1D /* FMDatabaseAdditions.m in Sources */,
+				369668E51674FD1F005B8F1D /* FMDatabasePool.m in Sources */,
+				369668E71674FD1F005B8F1D /* FMDatabaseQueue.m in Sources */,
+				369668E91674FD1F005B8F1D /* FMResultSet.m in Sources */,
+				3696690F16751311005B8F1D /* NTFoodSearchViewController.m in Sources */,
+				36966917167523A8005B8F1D /* NTFoodInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +411,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3607AFDE1672D67600A44020 /* Nutrition_TrackerTests.m in Sources */,
+				369668E21674FD1F005B8F1D /* FMDatabase.m in Sources */,
+				369668E41674FD1F005B8F1D /* FMDatabaseAdditions.m in Sources */,
+				369668E61674FD1F005B8F1D /* FMDatabasePool.m in Sources */,
+				369668E81674FD1F005B8F1D /* FMDatabaseQueue.m in Sources */,
+				369668EA1674FD1F005B8F1D /* FMResultSet.m in Sources */,
+				3696691016751311005B8F1D /* NTFoodSearchViewController.m in Sources */,
+				36966918167523A8005B8F1D /* NTFoodInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +524,14 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrition Tracker/Nutrition Tracker-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"/Users/appdev/Documents/Projects/iPad/nutrition/Nutrition\\ Tracker/**",
+				);
 				INFOPLIST_FILE = "Nutrition Tracker/Nutrition Tracker-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/Nutrition_Tracker-cthvjebazmyzhpccospnvmytnqqy/Build/Products/Debug\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -425,7 +542,14 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Nutrition Tracker/Nutrition Tracker-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"/Users/appdev/Documents/Projects/iPad/nutrition/Nutrition\\ Tracker/**",
+				);
 				INFOPLIST_FILE = "Nutrition Tracker/Nutrition Tracker-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/Nutrition_Tracker-cthvjebazmyzhpccospnvmytnqqy/Build/Products/Debug\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -484,6 +608,7 @@
 				3607AFE31672D67600A44020 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3607AFE41672D67600A44020 /* Build configuration list for PBXNativeTarget "Nutrition TrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +617,7 @@
 				3607AFE61672D67600A44020 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

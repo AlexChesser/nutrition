@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NTFirstViewController : UIViewController
 
+
+@interface NTFirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (strong, nonatomic) IBOutlet UITableView *FoodGroupsDescriptionTableView;
+@property (strong, nonatomic) NSMutableArray *FoodGroupDescriptions;
 @end
