@@ -21,7 +21,6 @@
 		3607AFBE1672D67500A44020 /* NTFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3607AFBD1672D67500A44020 /* NTFirstViewController.m */; };
 		3607AFC01672D67500A44020 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 3607AFBF1672D67500A44020 /* first.png */; };
 		3607AFC21672D67500A44020 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3607AFC11672D67500A44020 /* first@2x.png */; };
-		3607AFC51672D67500A44020 /* NTSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3607AFC41672D67500A44020 /* NTSecondViewController.m */; };
 		3607AFC71672D67500A44020 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 3607AFC61672D67500A44020 /* second.png */; };
 		3607AFC91672D67500A44020 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3607AFC81672D67500A44020 /* second@2x.png */; };
 		3607AFD11672D67600A44020 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3607AFD01672D67600A44020 /* SenTestingKit.framework */; };
@@ -79,8 +78,6 @@
 		3607AFBD1672D67500A44020 /* NTFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTFirstViewController.m; sourceTree = "<group>"; };
 		3607AFBF1672D67500A44020 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		3607AFC11672D67500A44020 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		3607AFC31672D67500A44020 /* NTSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NTSecondViewController.h; sourceTree = "<group>"; };
-		3607AFC41672D67500A44020 /* NTSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NTSecondViewController.m; sourceTree = "<group>"; };
 		3607AFC61672D67500A44020 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		3607AFC81672D67500A44020 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		3607AFCF1672D67600A44020 /* Nutrition TrackerTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nutrition TrackerTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,8 +178,6 @@
 				3607AFBD1672D67500A44020 /* NTFirstViewController.m */,
 				3607AFBF1672D67500A44020 /* first.png */,
 				3607AFC11672D67500A44020 /* first@2x.png */,
-				3607AFC31672D67500A44020 /* NTSecondViewController.h */,
-				3607AFC41672D67500A44020 /* NTSecondViewController.m */,
 				3607AFC61672D67500A44020 /* second.png */,
 				3607AFC81672D67500A44020 /* second@2x.png */,
 				3607AFA51672D67500A44020 /* Supporting Files */,
@@ -395,7 +390,6 @@
 				3607AFAB1672D67500A44020 /* main.m in Sources */,
 				3607AFAF1672D67500A44020 /* NTAppDelegate.m in Sources */,
 				3607AFBE1672D67500A44020 /* NTFirstViewController.m in Sources */,
-				3607AFC51672D67500A44020 /* NTSecondViewController.m in Sources */,
 				369668E11674FD1F005B8F1D /* FMDatabase.m in Sources */,
 				369668E31674FD1F005B8F1D /* FMDatabaseAdditions.m in Sources */,
 				369668E51674FD1F005B8F1D /* FMDatabasePool.m in Sources */,
