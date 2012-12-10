@@ -1,0 +1,12 @@
+Nutrition Tracker Initial Loadout.
+
+- Uses the USDA - SR25 nutritional database. 
+- Uses FMDB for direct connection to SQLITE
+- Searchable Nutrition database
+- Calculable nutrition amounts
+
+TODO:
+- macro ratio calculation
+- timers, reminders for feed window.
+- recommendation model 
+- daily values tracking 
