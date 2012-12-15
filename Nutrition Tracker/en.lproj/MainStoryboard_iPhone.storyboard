@@ -194,6 +194,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eRY-tT-5KB">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="57" id="Fbk-Xz-Zoh"/>
+                                    <constraint firstAttribute="height" constant="30" id="bIJ-td-4E1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -214,21 +215,38 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdP-rO-k95">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="31" id="K49-QB-xSX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="SS">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="hG9-zJ-Ffn" firstAttribute="leading" secondItem="SAg-uU-gUR" secondAttribute="leading" constant="127" id="4sy-mQ-TU4"/>
                             <constraint firstItem="Ja1-Iw-Va2" firstAttribute="top" secondItem="1yr-pR-BEh" secondAttribute="bottom" type="default" id="95U-Cf-GPx"/>
                             <constraint firstItem="uTf-D8-kJ0" firstAttribute="baseline" secondItem="eRY-tT-5KB" secondAttribute="baseline" type="default" id="Awo-gz-QSB"/>
-                            <constraint firstItem="hG9-zJ-Ffn" firstAttribute="baseline" secondItem="eRY-tT-5KB" secondAttribute="baseline" type="default" id="B8e-vv-C1m"/>
                             <constraint firstItem="1yr-pR-BEh" firstAttribute="top" secondItem="SAg-uU-gUR" secondAttribute="top" type="default" id="BpU-Y6-fCM"/>
-                            <constraint firstItem="hG9-zJ-Ffn" firstAttribute="leading" secondItem="eRY-tT-5KB" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="FIx-QL-zfm"/>
+                            <constraint firstItem="hG9-zJ-Ffn" firstAttribute="baseline" secondItem="eRY-tT-5KB" secondAttribute="baseline" type="default" id="EbM-Bo-47L"/>
+                            <constraint firstItem="qdP-rO-k95" firstAttribute="leading" secondItem="SAg-uU-gUR" secondAttribute="leading" constant="153" id="HkG-aJ-p2O"/>
+                            <constraint firstItem="qdP-rO-k95" firstAttribute="top" secondItem="eRY-tT-5KB" secondAttribute="top" type="default" id="JWm-KX-7FS"/>
                             <constraint firstItem="YAn-53-UDX" firstAttribute="bottom" secondItem="SAg-uU-gUR" secondAttribute="bottom" type="default" id="MOS-xj-MfZ"/>
+                            <constraint firstItem="hG9-zJ-Ffn" firstAttribute="baseline" secondItem="qdP-rO-k95" secondAttribute="baseline" type="default" id="QUx-oU-4rL"/>
                             <constraint firstItem="Ja1-Iw-Va2" firstAttribute="trailing" secondItem="SAg-uU-gUR" secondAttribute="trailing" type="default" id="QmD-y0-pe6"/>
                             <constraint firstItem="eRY-tT-5KB" firstAttribute="leading" secondItem="SAg-uU-gUR" secondAttribute="leading" constant="69" id="Ua8-OK-XpU"/>
                             <constraint firstItem="uTf-D8-kJ0" firstAttribute="leading" secondItem="SAg-uU-gUR" secondAttribute="leading" constant="9" id="UlE-XH-jmH"/>
                             <constraint firstItem="YAn-53-UDX" firstAttribute="top" secondItem="uTf-D8-kJ0" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UmM-a5-rzq"/>
                             <constraint firstItem="1yr-pR-BEh" firstAttribute="leading" secondItem="SAg-uU-gUR" secondAttribute="leading" type="default" id="VXV-Ko-Fi0"/>
                             <constraint firstItem="uTf-D8-kJ0" firstAttribute="top" secondItem="Ja1-Iw-Va2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="aas-D9-xRF"/>
+                            <constraint firstItem="qdP-rO-k95" firstAttribute="bottom" secondItem="eRY-tT-5KB" secondAttribute="bottom" type="default" id="b1E-rz-vZM"/>
                             <constraint firstItem="1yr-pR-BEh" firstAttribute="trailing" secondItem="SAg-uU-gUR" secondAttribute="trailing" type="default" id="cwq-c9-aEO"/>
                             <constraint firstItem="YAn-53-UDX" firstAttribute="trailing" secondItem="SAg-uU-gUR" secondAttribute="trailing" type="default" id="jH4-eD-Qaz"/>
                             <constraint firstItem="YAn-53-UDX" firstAttribute="leading" secondItem="SAg-uU-gUR" secondAttribute="leading" type="default" id="nRA-hv-sDu"/>
@@ -283,7 +301,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="498"/>
+            <point key="canvasLocation" x="917" y="490"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -303,7 +321,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="180"/>
+            <point key="canvasLocation" x="-352" y="512"/>
         </scene>
     </scenes>
     <resources>
