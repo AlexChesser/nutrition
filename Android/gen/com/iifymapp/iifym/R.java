@@ -15,11 +15,21 @@ public final class R {
     }
     public static final class id {
         public static final int btnLookupFoodInfo=0x7f070001;
-        public static final int code=0x7f070004;
+        public static final int carb=0x7f070009;
+        public static final int fat=0x7f07000e;
+        public static final int fibre=0x7f07000f;
+        public static final int group=0x7f070004;
+        public static final int kcal=0x7f07000c;
+        public static final int labelCarb=0x7f070008;
+        public static final int labelFat=0x7f07000a;
+        public static final int labelFibre=0x7f07000b;
+        public static final int labelKcal=0x7f070006;
+        public static final int labelPro=0x7f070007;
         public static final int list=0x7f070003;
         public static final int lookupFoodInfo=0x7f070002;
-        public static final int menu_settings=0x7f070006;
+        public static final int menu_settings=0x7f070010;
         public static final int name=0x7f070005;
+        public static final int protein=0x7f07000d;
         public static final int searchResults=0x7f070000;
     }
     public static final class layout {

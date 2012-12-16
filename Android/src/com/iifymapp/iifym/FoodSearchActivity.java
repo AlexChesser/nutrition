@@ -43,14 +43,23 @@ public class FoodSearchActivity extends MainActivity {
         String message = editText.getText().toString();
 
         String where = "";
-        if (message.trim() != "") {
+        if (!message.trim().equals("")) {
         	where = "WHERE Long_Desc LIKE '%"+message.trim()+"%'";
-        }        
-        String sql = "	SELECT fd._id, fg.FdGrp_Desc, fd.Long_Desc " + 
-        			" FROM FOOD_DES fd INNER JOIN FD_GROUP fg ON fd.FdGrp_Cd = fg.FdGrp_Cd " +
-        			where +
-        			" ORDER BY FdGrp_Desc, Shrt_Desc ASC";
+        }
         
+        String sql = "	SELECT   fd._id, " +
+        						"fg.FdGrp_Desc, " +
+        						"fd.Long_Desc, " +
+        						"ifnull(fd._208,0) as kcal, " +
+        						"cast(ifnull(fd._203,0) as int) || 'g' as Pro, " +
+        						"cast(ifnull(fd._204,0) as int) || 'g' as Fat, " +
+        						"cast(ifnull(fd._205,0) as int) || 'g' as Carb, " +
+        						"cast(ifnull(fd._291,0) as int) || 'g' as Fibre " +
+        			" FROM NUT_DENORM fd " + 
+        				"INNER JOIN FD_GROUP fg ON fd.FdGrp_Cd = fg.FdGrp_Cd " +
+        			  where +
+        			" ORDER BY FdGrp_Desc, Long_Desc ASC";
+        android.util.Log.i("SQL", sql);
         // Execute query
         Cursor c = sqdb.rawQuery(sql, null);
         if (c != null) {
@@ -59,8 +68,8 @@ public class FoodSearchActivity extends MainActivity {
         
 
         // set fields to be used in listview
-        String[] from 	= new String[] {"FdGrp_Desc", "Long_Desc"};
-        int[]	 to		= new int[] {R.id.name, R.id.code};
+        String[] from 	= new String[] {"FdGrp_Desc", "Long_Desc", "kcal", "Pro", "Fat", "Carb", "Fibre"};
+        int[]	 to		= new int[] {R.id.group, R.id.name, R.id.kcal, R.id.protein, R.id.fat, R.id.carb, R.id.fibre};
         
         // set data Adapter for listview
         dataAdapter = new SimpleCursorAdapter(this, R.layout.food_description, c, from, to);
@@ -71,6 +80,8 @@ public class FoodSearchActivity extends MainActivity {
         listView.setAdapter(dataAdapter);
         	         
         
+        myDbHelper.close();
+        sqdb.close();
         
         
 		
