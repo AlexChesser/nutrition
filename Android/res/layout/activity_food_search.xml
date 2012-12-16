@@ -1,14 +1,41 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/searchResults"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FoodSearchActivity" >
 
-    <TextView
+    <Button
+        android:id="@+id/btnLookupFoodInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/Lookup_food_info" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/ok"
+        android:onClick="lookupFoodInfo"
+         />
 
+    <EditText
+        android:id="@+id/lookupFoodInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnLookupFoodInfo"
+        android:layout_alignBottom="@+id/btnLookupFoodInfo"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/btnLookupFoodInfo"
+        android:ems="10"
+        android:hint="@string/Lookup_food_info"
+        android:inputType="text" >
+
+        <requestFocus />
+    </EditText>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lookupFoodInfo" >
+    </ListView>
+    
 </RelativeLayout>

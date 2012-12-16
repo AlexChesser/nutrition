@@ -1,15 +1,85 @@
 package com.iifymapp.iifym;
 
-import android.app.Activity;
+import java.io.IOException;
+
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
-public class FoodSearchActivity extends Activity {
+public class FoodSearchActivity extends MainActivity {
+	private SQLiteDatabase sqdb;	
+	private SimpleCursorAdapter dataAdapter;
+	
+	@SuppressWarnings("deprecation")
+	private void doSearch(){
+		// Create and connect to database
+        DatabaseHelper myDbHelper = new DatabaseHelper(this);
+        try {        	 
+        	myDbHelper.createDataBase();
+        } catch (IOException ioe) {
+        	throw new Error("Unable to create database"); 
+        }
+ 
+        try {
+        	myDbHelper.openDataBase(); 
+        }catch(SQLException sqle){
+        	throw sqle; 
+        }
+        sqdb = myDbHelper.getReadableDatabase();
 
+        // build SQL for query
+        EditText editText = (EditText) findViewById(R.id.lookupFoodInfo);
+        String message = editText.getText().toString();
+
+        String where = "";
+        if (message.trim() != "") {
+        	where = "WHERE Long_Desc LIKE '%"+message.trim()+"%'";
+        }        
+        String sql = "	SELECT fd._id, fg.FdGrp_Desc, fd.Long_Desc " + 
+        			" FROM FOOD_DES fd INNER JOIN FD_GROUP fg ON fd.FdGrp_Cd = fg.FdGrp_Cd " +
+        			where +
+        			" ORDER BY FdGrp_Desc, Shrt_Desc ASC";
+        
+        // Execute query
+        Cursor c = sqdb.rawQuery(sql, null);
+        if (c != null) {
+            c.moveToFirst();
+        }
+        
+
+        // set fields to be used in listview
+        String[] from 	= new String[] {"FdGrp_Desc", "Long_Desc"};
+        int[]	 to		= new int[] {R.id.name, R.id.code};
+        
+        // set data Adapter for listview
+        dataAdapter = new SimpleCursorAdapter(this, R.layout.food_description, c, from, to);
+        
+        
+        ListView listView = (ListView) findViewById(R.id.list);
+        // Assign adapter to ListView
+        listView.setAdapter(dataAdapter);
+        	         
+        
+        
+        
+		
+	}
+	
+    public void lookupFoodInfo(View view){
+    	doSearch();
+    }	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -17,17 +87,14 @@ public class FoodSearchActivity extends Activity {
 		// Show the Up button in the action bar.
 		//getActionBar().setDisplayHomeAsUpEnabled(true);
 		Intent intent = getIntent();
-		String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+		String search = intent.getStringExtra(FoodSearchActivity.EXTRA_MESSAGE);
+		if (search != null) {
+			
+			EditText editText = (EditText) findViewById(R.id.lookupFoodInfo);
+			editText.setText(search, TextView.BufferType.EDITABLE);
+			doSearch();
+		}
 		
-		
-		
-	    // Create the text view
-	    TextView textView = new TextView(this);
-	    textView.setTextSize(40);
-	    textView.setText(message);
-
-	    // Set the text view as the activity layout
-	    setContentView(textView);
 	    
 	}
 
