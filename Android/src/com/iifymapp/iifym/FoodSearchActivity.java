@@ -1,12 +1,10 @@
 package com.iifymapp.iifym;
 
 import java.io.IOException;
-
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
@@ -59,13 +57,12 @@ public class FoodSearchActivity extends MainActivity {
         				"INNER JOIN FD_GROUP fg ON fd.FdGrp_Cd = fg.FdGrp_Cd " +
         			  where +
         			" ORDER BY FdGrp_Desc, Long_Desc ASC";
-        android.util.Log.i("SQL", sql);
+        //android.util.Log.i("SQL", sql);
         // Execute query
         Cursor c = sqdb.rawQuery(sql, null);
         if (c != null) {
             c.moveToFirst();
         }
-        
 
         // set fields to be used in listview
         String[] from 	= new String[] {"FdGrp_Desc", "Long_Desc", "kcal", "Pro", "Fat", "Carb", "Fibre"};
@@ -74,17 +71,12 @@ public class FoodSearchActivity extends MainActivity {
         // set data Adapter for listview
         dataAdapter = new SimpleCursorAdapter(this, R.layout.food_description, c, from, to);
         
-        
         ListView listView = (ListView) findViewById(R.id.list);
         // Assign adapter to ListView
         listView.setAdapter(dataAdapter);
-        	         
         
         myDbHelper.close();
         sqdb.close();
-        
-        
-		
 	}
 	
     public void lookupFoodInfo(View view){

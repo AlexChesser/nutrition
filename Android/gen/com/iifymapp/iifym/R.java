@@ -30,6 +30,7 @@ public final class R {
         public static final int menu_settings=0x7f070010;
         public static final int name=0x7f070005;
         public static final int protein=0x7f07000d;
+        public static final int search=0x7f070011;
         public static final int searchResults=0x7f070000;
     }
     public static final class layout {
