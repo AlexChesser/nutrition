@@ -80,6 +80,7 @@
     }
 
     NSString *sql = [NSString stringWithFormat: @"SELECT fd.*, fg.FdGrp_Desc FROM FOOD_DES fd INNER JOIN FD_GROUP fg ON fd.FdGrp_Cd = fg.FdGrp_Cd WHERE Long_Desc LIKE '%%%@%%' %@ ORDER BY FdGrp_Desc, Shrt_Desc ASC", self.SearchBar.text, addWhere];
+    NSLog(@"%@",sql);
     self.SearchResults = [appDelegate getQuery:sql];
     
 }
