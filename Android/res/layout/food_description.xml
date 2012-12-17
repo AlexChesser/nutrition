@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dip" >
+
+    <TextView
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="TextView" />
+
+   	<TextView
+	    android:id="@+id/name"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@+id/group"
+	    android:text="TextView"
+	    android:textSize="20sp" />
+    
+	<TextView
+        android:id="@+id/labelKcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginRight="22dp"
+        android:layout_toLeftOf="@+id/labelPro"
+        android:text="kcal" />
+
+    <TextView
+        android:id="@+id/labelPro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginRight="22dp"
+        android:layout_toLeftOf="@+id/labelCarb"
+        android:text="Pro" />
+
+    <TextView
+        android:id="@+id/labelCarb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/carb"
+        android:layout_below="@+id/name"
+        android:layout_toLeftOf="@+id/labelFat"
+        android:layout_marginRight="20dp"
+        android:text="Carb" />
+
+    <TextView
+        android:id="@+id/labelFat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="18dp"
+        android:layout_toLeftOf="@+id/labelFibre"
+        android:layout_below="@+id/name"
+        android:text="Fat" />    
+
+    <TextView
+        android:id="@+id/labelFibre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="18dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/name"
+        android:text="Fibre" />    
+
+    <TextView
+	    android:id="@+id/kcal"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/labelKcal"
+	    android:layout_below="@+id/labelKcal"
+	    android:text="00.00" />
+    
+	<TextView
+	    android:id="@+id/protein"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/labelPro"
+	    android:layout_below="@+id/labelPro"
+	    android:text="00.00" />
+
+	<TextView
+	    android:id="@+id/carb"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/protein"
+	    android:layout_alignBottom="@+id/protein"
+	    android:layout_alignLeft="@+id/labelCarb"
+	    android:text="00.00" />
+
+	<TextView
+	    android:id="@+id/fat"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/carb"
+	    android:layout_alignBottom="@+id/carb"
+	    android:layout_alignLeft="@+id/labelFat"
+	    android:text="00.00" />
+
+	<TextView
+	    android:id="@+id/fibre"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/carb"
+	    android:layout_alignBottom="@+id/carb"
+	    android:layout_alignLeft="@+id/labelFibre"
+	    android:text="00.00" />	
+	
+</RelativeLayout>

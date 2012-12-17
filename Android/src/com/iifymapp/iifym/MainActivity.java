@@ -37,6 +37,7 @@ public class MainActivity extends Activity {
 
         // your logic here
     	this.lookupFoodInfo(null);
+    	android.util.Log.i("INFO", "Search Requested");
         return false;  // don't go ahead and show the search box
     }
     
