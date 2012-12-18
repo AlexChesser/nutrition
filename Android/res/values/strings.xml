@@ -7,5 +7,7 @@
     <string name="Lookup_food_info">Lookup food info</string>
     <string name="ok">OK</string>
     <string name="title_activity_food_search">Food Search</string>
+    <string name="title_activity_add_food">AddFoodActivity</string>
+    <string name="title_activity_food_amount">FoodAmountActivity</string>
 
 </resources>

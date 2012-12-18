@@ -1,5 +1,7 @@
 package com.iifymapp.iifym;
 
+import java.io.IOException;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +16,13 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // hopefully prevents a crash on first bood load.
+        DatabaseHelper x = new DatabaseHelper(this);
+        try {
+        	x.createDataBase();
+        } catch (IOException ioe) {
+        	throw new Error("Unable to create database");
+        }
         setContentView(R.layout.activity_main);
     }
 
@@ -25,12 +34,21 @@ public class MainActivity extends Activity {
     }
     
     public void lookupFoodInfo(View view){
+    	//android.util.Log.i("FOO", view.getTag().toString());
     	Intent intent = new Intent(this, FoodSearchActivity.class);
     	EditText editText = (EditText) findViewById(R.id.lookupFoodInfo);
     	String message = editText.getText().toString();
     	intent.putExtra(EXTRA_MESSAGE, message);
     	startActivity(intent);
     }
+    
+    public void setFoodAmount(String foodID){
+    	Intent intent = new Intent(this, FoodAmountActivity.class);
+    	intent.putExtra(EXTRA_MESSAGE, foodID);
+    	startActivity(intent);
+    }
+    
+    
     
     @Override
     public boolean onSearchRequested() {

@@ -21,7 +21,8 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     private SQLiteDatabase myDataBase; 
  
     private final Context myContext;
- 
+    protected SQLiteDatabase sqdb;
+    
     /**
      * Constructor
      * Takes and keeps a reference of the passed context in order to access to the application assets and resources.
@@ -149,5 +150,15 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         // Add your public helper methods to access and get content from the database.
        // You could return cursors by doing "return myDataBase.query(....)" so it'd be easy
        // to you to create adapters for your views.
- 
+	public void Connect(){
+		
+		// Create and connect to database        
+        try {
+        	openDataBase(); 
+        }catch(SQLException sqle){
+        	throw sqle; 
+        }
+        sqdb = getReadableDatabase();
+		
+	}
 }

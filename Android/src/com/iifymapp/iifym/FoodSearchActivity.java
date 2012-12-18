@@ -1,69 +1,33 @@
 package com.iifymapp.iifym;
 
-import java.io.IOException;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.SQLException;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
+import com.iifymapp.iifym.Model.NutritionData;
+
 public class FoodSearchActivity extends MainActivity {
-	private SQLiteDatabase sqdb;	
+	
 	private SimpleCursorAdapter dataAdapter;
 	
 	@SuppressWarnings("deprecation")
 	private void doSearch(){
-		// Create and connect to database
-        DatabaseHelper myDbHelper = new DatabaseHelper(this);
-        try {        	 
-        	myDbHelper.createDataBase();
-        } catch (IOException ioe) {
-        	throw new Error("Unable to create database"); 
-        }
- 
-        try {
-        	myDbHelper.openDataBase(); 
-        }catch(SQLException sqle){
-        	throw sqle; 
-        }
-        sqdb = myDbHelper.getReadableDatabase();
-
         // build SQL for query
         EditText editText = (EditText) findViewById(R.id.lookupFoodInfo);
-        String message = editText.getText().toString();
+        String message = editText.getText().toString();		
 
-        String where = "";
-        if (!message.trim().equals("")) {
-        	where = "WHERE Long_Desc LIKE '%"+message.trim()+"%'";
-        }
+        NutritionData n = new NutritionData(this); 
+        Cursor c = n.FoodSearch(message);
         
-        String sql = "	SELECT   fd._id, " +
-        						"fg.FdGrp_Desc, " +
-        						"fd.Long_Desc, " +
-        						"ifnull(fd._208,0) as kcal, " +
-        						"cast(ifnull(fd._203,0) as int) || 'g' as Pro, " +
-        						"cast(ifnull(fd._204,0) as int) || 'g' as Fat, " +
-        						"cast(ifnull(fd._205,0) as int) || 'g' as Carb, " +
-        						"cast(ifnull(fd._291,0) as int) || 'g' as Fibre " +
-        			" FROM NUT_DENORM fd " + 
-        				"INNER JOIN FD_GROUP fg ON fd.FdGrp_Cd = fg.FdGrp_Cd " +
-        			  where +
-        			" ORDER BY FdGrp_Desc, Long_Desc ASC";
-        //android.util.Log.i("SQL", sql);
-        // Execute query
-        Cursor c = sqdb.rawQuery(sql, null);
-        if (c != null) {
-            c.moveToFirst();
-        }
-
         // set fields to be used in listview
         String[] from 	= new String[] {"FdGrp_Desc", "Long_Desc", "kcal", "Pro", "Fat", "Carb", "Fibre"};
         int[]	 to		= new int[] {R.id.group, R.id.name, R.id.kcal, R.id.protein, R.id.fat, R.id.carb, R.id.fibre};
@@ -71,12 +35,21 @@ public class FoodSearchActivity extends MainActivity {
         // set data Adapter for listview
         dataAdapter = new SimpleCursorAdapter(this, R.layout.food_description, c, from, to);
         
-        ListView listView = (ListView) findViewById(R.id.list);
+        final ListView listView = (ListView) findViewById(R.id.list);
+        /*
+        listView.setClickable(true);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        	@Override
+        	public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+		        Cursor o = (Cursor)listView.getItemAtPosition(position);
+		        
+		        setFoodAmount(o.getString(o.getColumnIndex("_id")));
+        	}
+        });
+        */
+        
         // Assign adapter to ListView
         listView.setAdapter(dataAdapter);
-        
-        myDbHelper.close();
-        sqdb.close();
 	}
 	
     public void lookupFoodInfo(View view){
@@ -91,9 +64,10 @@ public class FoodSearchActivity extends MainActivity {
 		//getActionBar().setDisplayHomeAsUpEnabled(true);
 		Intent intent = getIntent();
 		String search = intent.getStringExtra(FoodSearchActivity.EXTRA_MESSAGE);
-		if (search != null) {
-			
-			EditText editText = (EditText) findViewById(R.id.lookupFoodInfo);
+		
+		EditText editText = (EditText) findViewById(R.id.lookupFoodInfo);
+		
+		if (!search.trim().equals("")) {		
 			editText.setText(search, TextView.BufferType.EDITABLE);
 			doSearch();
 		}

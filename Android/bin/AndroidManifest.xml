@@ -36,6 +36,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.iifymapp.iifym.AddFoodActivity"
+            android:label="@string/title_activity_add_food"
+            android:parentActivityName="com.iifymapp.iifym.FoodSearchActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.iifymapp.iifym.FoodSearchActivity" />
+        </activity>
+        <activity
+            android:name="com.iifymapp.iifym.FoodAmountActivity"
+            android:label="@string/title_activity_food_amount"
+            android:parentActivityName="com.iifymapp.iifym.FoodSearchActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.iifymapp.iifym.FoodSearchActivity" />
+        </activity>
     </application>
 
 </manifest>
