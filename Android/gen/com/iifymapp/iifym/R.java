@@ -14,28 +14,35 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int Description=0x7f070011;
-        public static final int Units=0x7f070013;
-        public static final int Value=0x7f070012;
-        public static final int btnLookupFoodInfo=0x7f070002;
-        public static final int carb=0x7f07000c;
-        public static final int fat=0x7f070010;
-        public static final int fibre=0x7f07000e;
-        public static final int group=0x7f070005;
-        public static final int kcal=0x7f07000f;
-        public static final int labelCarb=0x7f07000a;
-        public static final int labelFat=0x7f070009;
-        public static final int labelFibre=0x7f07000d;
-        public static final int labelKcal=0x7f070007;
-        public static final int labelPro=0x7f070008;
-        public static final int list=0x7f070004;
-        public static final int listView1=0x7f070000;
-        public static final int lookupFoodInfo=0x7f070003;
-        public static final int menu_settings=0x7f070014;
-        public static final int name=0x7f070006;
-        public static final int protein=0x7f07000b;
-        public static final int search=0x7f070015;
-        public static final int searchResults=0x7f070001;
+        public static final int Description=0x7f070018;
+        public static final int Units=0x7f07001a;
+        public static final int Value=0x7f070019;
+        public static final int btnLookupFoodInfo=0x7f070009;
+        public static final int carb=0x7f070013;
+        public static final int content=0x7f070005;
+        public static final int fat=0x7f070017;
+        public static final int fibre=0x7f070015;
+        public static final int group=0x7f07000c;
+        public static final int handle=0x7f070006;
+        public static final int kcal=0x7f070016;
+        public static final int labelCarb=0x7f070011;
+        public static final int labelFat=0x7f070010;
+        public static final int labelFibre=0x7f070014;
+        public static final int labelKcal=0x7f07000e;
+        public static final int labelPro=0x7f07000f;
+        public static final int list=0x7f07000b;
+        public static final int longDesc=0x7f070001;
+        public static final int lookupFoodInfo=0x7f07000a;
+        public static final int menu_settings=0x7f07001b;
+        public static final int name=0x7f07000d;
+        public static final int nutritionalInformation=0x7f070000;
+        public static final int protein=0x7f070012;
+        public static final int search=0x7f07001c;
+        public static final int searchResults=0x7f070008;
+        public static final int setWeight=0x7f070003;
+        public static final int slidingDrawer1=0x7f070004;
+        public static final int textView1=0x7f070002;
+        public static final int weights=0x7f070007;
     }
     public static final class layout {
         public static final int activity_add_food=0x7f030000;

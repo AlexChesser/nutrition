@@ -1,20 +1,32 @@
 package com.iifymapp.iifym;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.iifymapp.iifym.Model.NutritionData;
+import com.iifymapp.iifym.Model.NutritionData.Food;
+import com.iifymapp.iifym.Model.NutritionData.Nutrient;
+import com.iifymapp.iifym.Model.NutritionData.NutrientAdapter;
 
 public class FoodAmountActivity extends MainActivity {
-
+	public Food f;
+	public ArrayList<Nutrient> data;
+	public NutritionData n;
+	public ListView ni;
+	public NutrientAdapter Nadapter;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -23,15 +35,69 @@ public class FoodAmountActivity extends MainActivity {
 		//getActionBar().setDisplayHomeAsUpEnabled(true);
 		Intent intent = getIntent();
 		String search = intent.getStringExtra(FoodSearchActivity.EXTRA_MESSAGE);
-		NutritionData n = new NutritionData(this);
-		ArrayList<HashMap<String,String>> data = n.FoodData(search);
+		n = new NutritionData(this);
 		
-		ArrayList<String> theArray = new ArrayList<String>();
-		for (HashMap<String,String> d : data) {
-			android.util.Log.i(d.get("Description")+":", d.get("Value")+d.get("Units"));
-			theArray.add(d.get("Description")+":\t"+ d.get("Value")+d.get("Units"));
+		f = n.new Food();
+		f = f.init(search);
+		
+		setTitle(f.LongDesc);
+		TextView longDesc = (TextView)findViewById(R.id.longDesc);
+		longDesc.setText(f.LongDesc);
+		
+		data = f.getNutrients();
+		for (Nutrient d : data) {
+			android.util.Log.i(d.description, d.Value+d.Units);
 		}
+		
+		ni = (ListView) findViewById(R.id.nutritionalInformation);
+		Nadapter = n.new NutrientAdapter(this, R.layout.nutrient_row, data);
+		ni.setAdapter(Nadapter);
+	    
+		EditText setWeight = (EditText) findViewById(R.id.setWeight);
+		setWeight.addTextChangedListener(new TextWatcher(){
+	        public void afterTextChanged(Editable s) {
+	        	//android.util.Log.i("ATC", s.toString());
+	        }
+	        public void beforeTextChanged(CharSequence s, int start, int count, int after){}
+	        public void onTextChanged(CharSequence s, int start, int before, int count){
+	        	android.util.Log.i("OTC", s.toString());
+	        	setWeight(Float.parseFloat(s.toString()));
+	        }
+	    });		
+		
+		/* 
+		ListView w = (ListView) findViewById(R.id.weights);
+		ArrayAdapter weightAdapter = new ArrayAdapter<Weight>(this, android.R.layout.simple_list_item_1, f.getWeights());
+		w.setAdapter(weightAdapter);
+		*/
+	    
 	}
+	
+	public void setWeight(Float g) {
+		g = g / 100;
+    	
+    	for (Nutrient n : data) {
+    		String numberformat = "#0.00";
+    		switch (Integer.parseInt(n.Decimals)) {
+    			case 0:
+    				numberformat = "#0";
+    				break;
+    			case 1:
+    				numberformat = "#0.0";
+    				break;
+    			case 2:
+    				numberformat = "#0.00";
+    				break;
+    			case 3:
+    				numberformat = "#0.000";
+    				break;
+    		}
+    		NumberFormat formatter = new DecimalFormat(numberformat);
+    		n.Value = formatter.format((n.BaseValue * g));
+    	}
+    	android.util.Log.i("Updated", "TO: "+String.valueOf(g));
+    	Nadapter.notifyDataSetChanged();
+    }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

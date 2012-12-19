@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -36,7 +38,7 @@ public class FoodSearchActivity extends MainActivity {
         dataAdapter = new SimpleCursorAdapter(this, R.layout.food_description, c, from, to);
         
         final ListView listView = (ListView) findViewById(R.id.list);
-        /*
+        
         listView.setClickable(true);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         	@Override
@@ -46,7 +48,7 @@ public class FoodSearchActivity extends MainActivity {
 		        setFoodAmount(o.getString(o.getColumnIndex("_id")));
         	}
         });
-        */
+        
         
         // Assign adapter to ListView
         listView.setAdapter(dataAdapter);
@@ -64,15 +66,30 @@ public class FoodSearchActivity extends MainActivity {
 		//getActionBar().setDisplayHomeAsUpEnabled(true);
 		Intent intent = getIntent();
 		String search = intent.getStringExtra(FoodSearchActivity.EXTRA_MESSAGE);
-		
 		EditText editText = (EditText) findViewById(R.id.lookupFoodInfo);
 		
-		if (!search.trim().equals("")) {		
-			editText.setText(search, TextView.BufferType.EDITABLE);
-			doSearch();
-		}
+		editText.addTextChangedListener(new TextWatcher(){
+	        public void afterTextChanged(Editable s) {
+	        	//android.util.Log.i("ATC", s.toString());
+	        }
+	        public void beforeTextChanged(CharSequence s, int start, int count, int after){}
+	        public void onTextChanged(CharSequence s, int start, int before, int count){
+	        	//android.util.Log.i("otc", s.toString() + " s:" + start + " b:" + before + " c:" + count);
+	        	if (count > before) {
+	        		doSearch();
+	        	}
+	        }
+	    }); 
 		
-	    
+		try {
+			if (search != null && !search.trim().equals("")) {
+				android.util.Log.i("SEarching for: ", search);
+				editText.setText(search, TextView.BufferType.EDITABLE);
+			}
+			doSearch();
+		} catch (Exception e) {
+			android.util.Log.i("Error", e.getMessage());
+		}
 	}
 
 	@Override

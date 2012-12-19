@@ -3,14 +3,73 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FoodAmountActivity" >
-
+    
     <ListView
-        android:id="@+id/listView1"
+        android:id="@+id/nutritionalInformation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="77dp" >
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="40dp" >
+
     </ListView>
 
+    <TextView
+        android:id="@+id/longDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/setWeight"
+        android:layout_alignBottom="@+id/setWeight"
+        android:layout_toRightOf="@+id/setWeight"
+        android:text="g"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/setWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/longDesc"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="100.0" />
+    <SlidingDrawer
+        android:id="@+id/slidingDrawer1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/nutritionalInformation"
+        android:layout_marginLeft="128dp"
+        android:content="@+id/content"
+        android:handle="@+id/handle" >
+
+        <Button
+            android:id="@+id/handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weights" />
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="317dp"
+            android:layout_height="match_parent" >
+
+            <ListView
+                android:id="@+id/weights"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+
+        </LinearLayout>
+    </SlidingDrawer>
+    
 </RelativeLayout>
