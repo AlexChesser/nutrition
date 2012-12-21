@@ -80,6 +80,7 @@ public class NutritionData extends DatabaseHelper {
 				this.Weights = new ArrayList<Weight>();
 				Connect();
 				String sql = "SELECT * FROM WEIGHT WHERE Ndb_No = '"+this.NdbNo+"'";
+				
 		        Cursor c = sqdb.rawQuery(sql, null);
 		        if (c != null) {
 		            c.moveToFirst();
@@ -90,12 +91,26 @@ public class NutritionData extends DatabaseHelper {
 		            	w.Desc = c.getString(c.getColumnIndex("Msre_Desc"));
 		            	w.Grams = c.getFloat(c.getColumnIndex("Gm_Wgt"));
 		            	this.Weights.add(w);
+		            	c.moveToNext();
 		            }
 		        }
 		        close();
 		        c.close();
 		        sqdb.close();
+	        	Weight w = new Weight();
+	        	w.Amount = 100.00f;
+	        	w.Desc = "grams";
+	        	w.Grams = 100.00f;
+	        	this.Weights.add(w);
+	        	
+	        	w = new Weight();
+	        	w.Amount = 1.00f;
+	        	w.Desc = "pound";
+	        	w.Grams = 450.00f;
+	        	this.Weights.add(w);
 			}
+
+        	
 			return this.Weights;
 		}
 

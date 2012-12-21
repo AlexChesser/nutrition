@@ -11,6 +11,10 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -19,6 +23,7 @@ import com.iifymapp.iifym.Model.NutritionData;
 import com.iifymapp.iifym.Model.NutritionData.Food;
 import com.iifymapp.iifym.Model.NutritionData.Nutrient;
 import com.iifymapp.iifym.Model.NutritionData.NutrientAdapter;
+import com.iifymapp.iifym.Model.NutritionData.Weight;
 
 public class FoodAmountActivity extends MainActivity {
 	public Food f;
@@ -65,11 +70,26 @@ public class FoodAmountActivity extends MainActivity {
 	        }
 	    });		
 		
-		/* 
+		
 		ListView w = (ListView) findViewById(R.id.weights);
-		ArrayAdapter weightAdapter = new ArrayAdapter<Weight>(this, android.R.layout.simple_list_item_1, f.getWeights());
+		
+		w.setOnItemClickListener(new OnItemClickListener() {
+		    
+		    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+		        // do whatever stuff you wanna do here
+		    	EditText setWeight = (EditText) findViewById(R.id.setWeight);
+		    	ArrayList<Weight> weights = f.getWeights();
+		    	Weight setTo = weights.get(position);
+		    	android.util.Log.i(weights.get(position).toString(), String.valueOf(position));
+		    	setWeight.setText(String.valueOf(setTo.Grams));
+		    }
+		});
+		
+		ArrayAdapter<Weight> weightAdapter = new ArrayAdapter<Weight>(this, android.R.layout.simple_list_item_1, f.getWeights());
 		w.setAdapter(weightAdapter);
-		*/
+		for (Weight weight : f.getWeights()) {
+			android.util.Log.i("Weight option", weight.toString());
+		}
 	    
 	}
 	
