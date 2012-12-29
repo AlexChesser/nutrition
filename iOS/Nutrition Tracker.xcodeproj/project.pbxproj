@@ -41,6 +41,7 @@
 		364E8B46167F89E60035DCEE /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E8B3C167F89E60035DCEE /* FMDatabaseQueue.m */; };
 		364E8B47167F89E60035DCEE /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E8B3E167F89E60035DCEE /* FMResultSet.m */; };
 		364E8B48167F89E60035DCEE /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 364E8B3E167F89E60035DCEE /* FMResultSet.m */; };
+		367D39C21686669000F43017 /* nutrition_fts3.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 367D39C11686668F00F43017 /* nutrition_fts3.sqlite */; };
 		3696689C1674FC8E005B8F1D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3696689B1674FC8E005B8F1D /* libsqlite3.0.dylib */; };
 		3696690F16751311005B8F1D /* NTFoodSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3696690E16751311005B8F1D /* NTFoodSearchViewController.m */; };
 		3696691016751311005B8F1D /* NTFoodSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3696690E16751311005B8F1D /* NTFoodSearchViewController.m */; };
@@ -99,6 +100,7 @@
 		364E8B3C167F89E60035DCEE /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = ../../fmdb/src/FMDatabaseQueue.m; sourceTree = "<group>"; };
 		364E8B3D167F89E60035DCEE /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = ../../fmdb/src/FMResultSet.h; sourceTree = "<group>"; };
 		364E8B3E167F89E60035DCEE /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = ../../fmdb/src/FMResultSet.m; sourceTree = "<group>"; };
+		367D39C11686668F00F43017 /* nutrition_fts3.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = nutrition_fts3.sqlite; sourceTree = "<group>"; };
 		3696689B1674FC8E005B8F1D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		3696690D16751311005B8F1D /* NTFoodSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NTFoodSearchViewController.h; path = FoodSearch/NTFoodSearchViewController.h; sourceTree = "<group>"; };
 		3696690E16751311005B8F1D /* NTFoodSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NTFoodSearchViewController.m; path = FoodSearch/NTFoodSearchViewController.m; sourceTree = "<group>"; };
@@ -165,6 +167,8 @@
 		3607AFA41672D67500A44020 /* Nutrition Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				367D39C11686668F00F43017 /* nutrition_fts3.sqlite */,
+				361DB4A0167302B400CA0009 /* nutrition.sqlite */,
 				36966919167523B0005B8F1D /* FoodInfo */,
 				3696690C167512C2005B8F1D /* SearchView */,
 				369668601674F964005B8F1D /* Utilities */,
@@ -222,7 +226,6 @@
 		3607AFE71672D6CD00A44020 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				361DB4A0167302B400CA0009 /* nutrition.sqlite */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				3607AFC71672D67500A44020 /* second.png in Resources */,
 				3607AFC91672D67500A44020 /* second@2x.png in Resources */,
 				361DB4A1167302B400CA0009 /* nutrition.sqlite in Resources */,
+				367D39C21686669000F43017 /* nutrition_fts3.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

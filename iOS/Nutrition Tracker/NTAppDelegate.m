@@ -14,13 +14,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    self.databaseName = @"nutrition.sqlite";
+    self.databaseName = @"nutrition_fts3.sqlite";
     self.addFilter = @"";
     
     NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDir = [documentPaths objectAtIndex:0];
     self.databasePath = [documentDir stringByAppendingPathComponent:self.databaseName];
-    
+    NSLog(@"%@",self.databasePath);
       
     self.database = [[FMDatabase alloc] initWithPath:self.databasePath];
     
@@ -29,10 +29,13 @@
 
 -(NSArray *)getQuery: (NSString *) sql{
     [self.database open];
+    sql = @"select * from nut_denorm;";
     FMResultSet *results = [self.database executeQuery:sql];
+    NSLog(@"%@",self.database);
     NSMutableArray *arr = [[NSMutableArray alloc] initWithArray:nil];
     while([results next])
     {
+        NSLog(@"Results");
         [arr addObject:[results resultDictionary]];
     }
     [self.database close];

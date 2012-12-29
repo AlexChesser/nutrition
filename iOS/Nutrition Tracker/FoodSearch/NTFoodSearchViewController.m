@@ -79,7 +79,7 @@
         addWhere = [NSString stringWithFormat:@" AND fg.FdGrp_Desc = '%@'", appDelegate.addFilter];
     }
 
-    NSString *sql = [NSString stringWithFormat: @"SELECT fd.*, fg.FdGrp_Desc FROM FOOD_DES fd INNER JOIN FD_GROUP fg ON fd.FdGrp_Cd = fg.FdGrp_Cd WHERE Long_Desc LIKE '%%%@%%' %@ ORDER BY FdGrp_Desc, Shrt_Desc ASC", self.SearchBar.text, addWhere];
+    NSString *sql = [NSString stringWithFormat: @"SELECT fd.*, fg.FdGrp_Desc FROM NUT_DENORM fd INNER JOIN FD_GROUP fg ON fd.FdGrp_Cd = fg.FdGrp_Cd WHERE Long_Desc LIKE '%%%@%%' %@ ORDER BY FdGrp_Desc, Long_Desc ASC;", self.SearchBar.text, addWhere];
     NSLog(@"%@",sql);
     self.SearchResults = [appDelegate getQuery:sql];
     
@@ -87,6 +87,7 @@
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     [self fetchResults];
+    NSLog(@"%d",[self.SearchResults count]);
     [self.ResultTable reloadData];
 
 }
